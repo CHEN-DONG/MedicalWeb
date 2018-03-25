@@ -55,9 +55,42 @@
     <h3 class="title">2018中国医师协会检验医师年会</h3>
     <p class="sub-title">跨界开拓检验行业视野 系统提高检验诊断能力</p>
     <div class="case">
-      <div class="case-item bgi" style="background-image: url('../assets/image/caseimage.png')"></div>
-      <div class="case-item bgi" style="background-image: url('../assets/image/caseimage.png')"></div>
-      <div class="case-item bgi" style="background-image: url('../assets/image/caseimage.png')"></div>
+      <div class="ui card case-item">
+        <div class="blurring dimmable image">
+          <div class="ui dimmer">
+            <div class="content">
+              <div class="center">
+                <div class="ui inverted button">显示的文字</div>
+              </div>
+            </div>
+          </div>
+          <div class="bgi" style="background-image: url('../assets/image/egimage.png')"></div>
+        </div>
+      </div>
+      <div class="ui card case-item">
+        <div class="blurring dimmable image">
+          <div class="ui dimmer">
+            <div class="content">
+              <div class="center">
+                <div class="ui inverted button">显示的文字</div>
+              </div>
+            </div>
+          </div>
+          <div class="bgi" style="background-image: url('../assets/image/egimage.png')"></div>
+        </div>
+      </div>
+      <div class="ui card case-item">
+        <div class="blurring dimmable image">
+          <div class="ui dimmer">
+            <div class="content">
+              <div class="center">
+                <div class="ui inverted button">显示的文字</div>
+              </div>
+            </div>
+          </div>
+          <div class="bgi" style="background-image: url('../assets/image/egimage.png')"></div>
+        </div>
+      </div>
     </div>
     <h3 class="title">新闻中心</h3>
     <p class="sub-title">INFORMATION</p>
@@ -115,32 +148,29 @@
     <p class="sub-title">FRIENDLY LINK</p>
     <div class="friend">
       <div class="friend-item">
-          <div class="bgi" style="background-image: url('../assets/image/egimage.png')"></div>
+        <div class="bgi" style="background-image: url('../assets/image/egimage.png')"></div>
       </div>
       <div class="friend-item">
-          <div class="bgi" style="background-image: url('../assets/image/egimage.png')"></div>
+        <div class="bgi" style="background-image: url('../assets/image/egimage.png')"></div>
       </div>
       <div class="friend-item">
-          <div class="bgi" style="background-image: url('../assets/image/egimage.png')"></div>
+        <div class="bgi" style="background-image: url('../assets/image/egimage.png')"></div>
       </div>
       <div class="friend-item">
-          <div class="bgi" style="background-image: url('../assets/image/egimage.png')"></div>
+        <div class="bgi" style="background-image: url('../assets/image/egimage.png')"></div>
       </div>
       <div class="friend-item">
-          <div class="bgi" style="background-image: url('../assets/image/egimage.png')"></div>
+        <div class="bgi" style="background-image: url('../assets/image/egimage.png')"></div>
       </div>
       <div class="friend-item">
-          <div class="bgi" style="background-image: url('../assets/image/egimage.png')"></div>
+        <div class="bgi" style="background-image: url('../assets/image/egimage.png')"></div>
       </div>
       <div class="friend-item">
-          <div class="bgi" style="background-image: url('../assets/image/egimage.png')"></div>
+        <div class="bgi" style="background-image: url('../assets/image/egimage.png')"></div>
       </div>
       <div class="friend-item">
-          <div class="bgi" style="background-image: url('../assets/image/egimage.png')"></div>
+        <div class="bgi" style="background-image: url('../assets/image/egimage.png')"></div>
       </div>
-      
-    
-
     </div>
   </main>
   <footer>
@@ -167,7 +197,12 @@
 
   .case-item {
     height: 280px;
-    width: 32%;
+    width: 32% !important;
+    margin: 0 !important;
+  }
+
+  .case-item .bgi {
+    height: 280px;
   }
 
   .information {
@@ -178,8 +213,13 @@
 
   .info-item {
     display: flex;
-    width: 50%;
+    width: 49%;
     margin-bottom: 35px;
+    margin-right: 1%;
+  }
+
+  .info-item:hover{
+    box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, .2);
   }
 
   .info-item .info-img {
@@ -220,10 +260,10 @@
   .friend-item {
     height: 150px;
     width: 20%;
-   margin-bottom: 20px;
+    margin-bottom: 20px;
   }
 
-  .friend-item .bgi{
+  .friend-item .bgi {
     width: 90%;
     height: 100%;
     margin: 0 auto;
