@@ -177,7 +177,7 @@ ul {
 
 .sidebar {
     display: inline-block;
-    margin: 25px 0 0 48px;
+    margin: 10px 0 0 48px;
     padding: 0;
 }
 
@@ -196,7 +196,9 @@ ul {
 .sidebar li:first-child,
 .total-price,
 .course-price,
-.coupons {
+.coupons,
+.material-detail .views,
+.material-detail p {
     color: #888;
 }
 
@@ -221,7 +223,8 @@ ul {
 
 .no-promotion,
 .next-page-text,
-.original-price {
+.original-price,
+.material-detail .date {
     color: #c8c8c8;
 }
 
@@ -231,6 +234,7 @@ ul {
 
 .content {
     margin: 15px 50px 0 276px;
+    padding-top: 1px;
 }
 
 .content-list li {
@@ -263,15 +267,6 @@ ul {
     color: #66b9e7;
 }
 
-.promotion:before {
-    content: "";
-    position: absolute;
-    left: -30px;
-    width: 17px;
-    height: 17px;
-    background: url(../image/check-mark.png) no-repeat center center;
-}
-
 .meeting-name,
 .promotion,
 .no-promotion {
@@ -292,9 +287,28 @@ ul {
 }
 
 .next-page-text {
-    display: inline-block;
+    display: block;
     margin: 70px 0 50px;
     text-align: center;
+}
+
+
+/*metarialDetail*/
+
+.material-detail {
+    margin-top: 20px;
+}
+
+.views {
+    margin: 55px;
+}
+
+.material-detail p {
+    margin-top: 30px;
+}
+
+.material-detail+input {
+    margin: 200px 0;
 }
 
 @media screen and (max-width: 1200px) {
