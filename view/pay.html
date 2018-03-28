@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../assets/css/semantic.min.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/semantic.min.js"></script>
+    <script src="../js/home.js"></script>
+    <title>登录</title>
+</head>
+
+<body>
+    <header>
+        <div class="ui borderless top menu">
+            <div class="logo">
+                <a href="./home.html">
+                    <img src="../assets/image/logo.png">
+                </a>
+            </div>
+            <div class="right menu">
+                <a class="item" href="./home.html">首页</a>
+                <a class="item">参会指南</a>
+                <a class="item">参会报名</a>
+                <a class="item">会议动态</a>
+                <a class="item">会议视频</a>
+                <a class="item">会议征文</a>
+                <a class="item">关于我们</a>
+                <a class="item hide" href="./login.html">登录</a>
+                <a class="item active">个人中心</a>
+            </div>
+        </div>
+        <div class="banner bgi" style="background-image: url('../assets/image/banner.png')"></div>
+    </header>
+    <main class="topnav main">
+        <div>
+            <p class="amount">支付金额：<span>47000元</span></p>
+        </div>
+        <div class="pay-type">
+            <p>请选择您的支付方式</p>
+            <a><img src="../assets/image/wechat.png">微信支付</a>
+            <a><img src="../assets/image/alipay.png">支付宝支付</a>
+            <a><img src="../assets/image/card.png">银行卡支付</a>
+            <a><img src="../assets/image/publictransfer.png">对公转账</a>
+            <a><img src="../assets/image/localpay.png">现场支付</a>
+        </div>
+        <input type="button" class="ui button primary wide-btn" value="确认支付">
+    </main>
+    <footer>
+        <div class="footer">
+            <p>Copyright © 2018 CCS&ESS Meetings 2018. All Rights Reserved.</p>
+            <p>京ICP备13020642号-20 京公网备案11010502025794</p>
+        </div>
+    </footer>
+</body>
+<style>
+    /*pay*/
+    
+    .amount {
+        display: flex;
+        position: relative;
+        padding-left: 15px;
+        line-height: 50px;
+        border-bottom: 1px solid #e1e1e1;
+    }
+    
+    .amount:before {
+        content: "";
+        position: absolute;
+        left: 5px;
+        align-self: center;
+        height: 14px;
+        width: 3px;
+        background: #1c9cfe;
+    }
+    
+    .amount span {
+        color: #ff8938;
+    }
+    
+    .pay-type {
+        padding-bottom: 40px;
+        text-align: center;
+    }
+    
+    .pay-type a {
+        display: inline-block;
+        align-items: center;
+        justify-content: center;
+        margin: 0 15px;
+        width: 140px;
+        min-width: 100px;
+        height: 45px;
+        line-height: 45px;
+        border: 1px solid #d9d9d9;
+        text-align: center;
+    }
+    
+    .pay-type img {
+        margin-right: 5px;
+        vertical-align: middle;
+    }
+    
+    .pay-type p {
+        margin: 25px 0;
+        text-align: left;
+    }
+    
+    .ui.button {
+        display: block;
+        margin: 0 auto;
+    }
+</style>
+
+</html>

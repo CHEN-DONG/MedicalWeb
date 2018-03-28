@@ -36,68 +36,106 @@
         <ul class="sidebar float-left">
             <li>选择商品
             </li>
-            <li>
-                <span class="active-slide-option">会议与课程</span><span class="price">1000元</span></li>
-            <li>住宿费</li>
-            <li>餐饮费</li>
+            <li>会议与课程<span class="price">1000元</span></li>
+            <li>住宿费<span class="price">1400元</span></li>
+            <li><span class="active-slide-option">餐饮费</span></li>
             <li>资料费</li>
         </ul>
         <div class="content">
-            <ul class="content-list">
-                <li>
-                    <div>
-                        <p class="meeting-name">会议名称01</p>
-                        <p class="promotion">3月1日支付优惠500元</p>
-                        <div class="course-price">
-                            <span class="original-price">费用1000元</span> 优惠后
-                            <span class="price">500</span>
-                        </div>
-                    </div>
-                    <input type="button" class="ui button primary middle-btn" value="详情">
-                </li>
-                <li>
-                    <div>
-                        <p class="meeting-name">会议名称02</p>
-                        <p class="no-promotion">暂无优惠</p>
-                        <div class="course-price">
-                            费用
-                            <span class="price">1000</span>
-                        </div>
-                    </div>
-                    <input type="button" class="ui button primary middle-btn" value="详情">
-                </li>
-                <li>
-                    <div>
-                        <p class="meeting-name">课程名称01</p>
-                        <p class="promotion">3月1日支付优惠500元</p>
-                        <div class="course-price">
-                            <span class="original-price">费用1000元</span> 优惠后
-                            <span class="price">1000</span>
-                        </div>
-                    </div>
-                    <input type="button" class="ui button primary middle-btn" value="详情">
-                </li>
-                <li>
-                    <div>
-                        <p class="meeting-name">课程名称02</p>
-                        <p class="no-promotion">暂无优惠</p>
-                        <div class="course-price">
-                            费用
-                            <span class="price">1000</span>
-                        </div>
-                    </div>
-                    <input type="button" class="ui button primary middle-btn" value="详情">
-                </li>
-            </ul>
+            <div class="bfc">
+                <table class="ui collapsing celled table hotel-table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>3月1日</th>
+                            <th>3月2日</th>
+                            <th>3月3日</th>
+                            <th>3月4日</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                午餐
+                            </td>
+                            <td>
+                                <input type="radio" id="1" name="date3-1" class="check-mark-radio" />
+                                <label for="1"></label>
+                            </td>
+                            <td>
+                                <input type="radio" id="2" name="date3-2" class="check-mark-radio" />
+                                <label for="2"></label>
+                            </td>
+                            <td>
+                                <input type="radio" id="3" name="date3-3" class="check-mark-radio" />
+                                <label for="3"></label>
+                            </td>
+                            <td>
+                                <input type="radio" id="4" name="date3-4" class="check-mark-radio" />
+                                <label for="4"></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                晚餐
+                            </td>
+                            <td>
+                                <input type="radio" id="5" name="date3-1" class="check-mark-radio" />
+                                <label for="5"></label>
+                            </td>
+                            <td>
+                                <input type="radio" id="6" name="date3-2" class="check-mark-radio" />
+                                <label for="6"></label>
+                            </td>
+                            <td>
+                                <input type="radio" id="7" name="date3-3" class="check-mark-radio" />
+                                <label for="7"></label>
+                            </td>
+                            <td>
+                                <input type="radio" id="8" name="date3-4" class="check-mark-radio" />
+                                <label for="8"></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                晚宴
+                            </td>
+                            <td>
+                                <input type="radio" id="9" name="date3-1" class="check-mark-radio" />
+                                <label for="9"></label>
+                            </td>
+                            <td>
+                                <input type="radio" id="10" name="date3-2" class="check-mark-radio" />
+                                <label for="10"></label>
+                            </td>
+                            <td>
+                                <input type="radio" id="11" name="date3-3" class="check-mark-radio" />
+                                <label for="11"></label>
+                            </td>
+                            <td>
+                                <input type="radio" id="12" name="date3-4" class="check-mark-radio" />
+                                <label for="12"></label>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="hotel-remark">
+                    <p>您订购了xxxx会议 赠送您<span>3月3日</span>大床房一晚</p>
+                    <p>酒店备注：是出差入住酒店吧？首先一点，发票备注是可有可无的，最重要的是发票抬头和发票明细，不是发票备注，发票抬头写你们公司，明细写住宿费，开票时间就是最好的时间证明，不用卸载备注，回头给财务报销的时候最多让你在发票背面签个这里最多200字。</p>
+                </div>
+            </div>
+            <div class="accommodations">
+                <h4>午餐</h4>
+                <p>3月1日午餐 400元</p>
+            </div>
             <div class="coupon-total">
-                <div>优惠券</div>
+                <h4>优惠券</h4>
                 <div>
                     <a class="coupons">有2张优惠券可用<i class="angle right icon"></i></a>
-                    <P class="total-price">费用合计 :<span class="price">1000</span> 元</P>
+                    <P class="total-price">费用合计 :<span class="price">500</span> 元</P>
                 </div>
             </div>
             <input type="submit" class="ui button primary float-right wide-btn" value="提交">
-            <div class="next-page-text">(提交后进入下一项选择)</div>
         </div>
     </div>
     <footer>
@@ -110,4 +148,7 @@
 
 </html>
 <script>
+    $("input").click(function() {
+        window.location.href = "material.html";
+    });
 </script>
