@@ -190,6 +190,10 @@
     color: #888;
 }
 
+.course-price {
+    margin-bottom: 13px;
+}
+
 .sidebar li:first-child:before {
     content: "";
     position: absolute;
@@ -225,11 +229,15 @@
     padding-top: 1px;
 }
 
-.content-list li {
+.content-list li,
+.hotel-list li {
     display: flex;
     align-items: center;
     justify-content: space-between;
     list-style: none;
+}
+
+.content-list li {
     border-bottom: 1px solid #e8e8e8;
 }
 
@@ -296,7 +304,72 @@
 }
 
 .material-detail+input {
-    margin: 200px 0;
+    margin-top: 200px !important;
+}
+
+
+/*hotel*/
+
+.hotel-list li {
+    margin: 13px 0;
+}
+
+.hotel {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.hotel+input {
+    align-self: flex-start;
+}
+
+.hotel p {
+    margin-bottom: 7px;
+    font-size: 13px;
+    line-height: 13px;
+}
+
+.hotel p:last-of-type {
+    margin-bottom: 0;
+}
+
+.hotel p:nth-child(2),
+.hotel p:nth-child(4) {
+    color: #888;
+}
+
+.hotel p:nth-child(3) {
+    color: #e0955e;
+}
+
+
+/*hotelDetail*/
+
+.hotel-table {
+    border-left: 0 !important;
+    border-right: 0 !important;
+}
+
+.hotel-table tbody tr td {
+    padding: 0 !important;
+    width: 82px;
+}
+
+input[type="radio"].check-mark-radio+label:before {
+    content: "\a0";
+    /*不换行空格*/
+    display: inline-block;
+    width: 100%;
+    height: 45px;
+}
+
+input[type="radio"]:checked.check-mark-radio+label:before {
+    background: url(../image/check-mark.png) no-repeat center center;
+}
+
+input[type="radio"].check-mark-radio {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
 }
 
 @media screen and (max-width: 1200px) {
