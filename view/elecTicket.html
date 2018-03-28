@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../assets/css/semantic.min.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <script src="../assets/js/jquery.min.js"></script>
+  <script src="../assets/js/semantic.min.js"></script>
+  <script src="../js/home.js"></script>
+  <title>电子券</title>
+</head>
+
+<body>
+  <header>
+    <div class="ui borderless top menu">
+      <div class="logo">
+        <a href="./home.html">
+          <img src="../assets/image/logo.png">
+        </a>
+      </div>
+      <div class="right menu">
+        <a class="item" href="./home.html">首页</a>
+        <a class="item">参会指南</a>
+        <a class="item">参会报名</a>
+        <a class="item">会议动态</a>
+        <a class="item">会议视频</a>
+        <a class="item">会议征文</a>
+        <a class="item">关于我们</a>
+        <a class="item hide" href="./login.html">登录</a>
+        <a class="item active">个人中心</a>
+      </div>
+    </div>
+    <div class="banner bgi" style="background-image: url('../assets/image/banner.png')"></div>
+  </header>
+  <main class="topnav main">
+    <h3 class="list-title">我的电子券</h3>
+    <div class="vertical-tab">
+      <div class="ui vertical tabular menu">
+        <a class="active item" data-tab="used">
+          已使用
+        </a>
+        <a class="item" data-tab="unused">
+          未使用
+        </a>
+      </div>
+      <div class="ui tab active" data-tab="used">
+        <div class="electicket-item">
+          <p>名称</p>
+          <a class="ui blue button" href="#">点击查看电子凭证二维码</a>
+        </div>
+      </div>
+      <div class="ui tab" data-tab="unused">
+        <div class="electicket-item">
+          <p>名称</p>
+          <a class="ui blue button" href="#">点击查看电子凭证二维码</a>
+        </div>
+        <div class="electicket-item">
+          <p>名称</p>
+          <a class="ui blue button" href="#">点击查看电子凭证二维码</a>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="footer">
+      <p>Copyright © 2018 CCS&ESS Meetings 2018. All Rights Reserved.</p>
+      <p>京ICP备13020642号-20 京公网备案11010502025794</p>
+    </div>
+  </footer>
+</body>
+<style>
+  .electicket-item {
+    width: 80%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, .1);
+    margin: 0 auto 20px 0;
+    padding: 0 20px;
+  }
+</style>
+
+</html>
