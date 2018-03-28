@@ -159,3 +159,8 @@ header {
 .hover-item:hover {
     box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, .2);
 }
+
+.ui.icon.button>img{
+    height: 10px;
+    width: 12px;
+}
