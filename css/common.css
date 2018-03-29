@@ -169,6 +169,7 @@ header {
 .list-title{
   position: relative;
   padding: 0 10px;
+  margin-bottom: 30px;
 }
 
 .list-title:before{
