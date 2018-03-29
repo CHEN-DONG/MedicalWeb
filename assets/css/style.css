@@ -99,19 +99,19 @@
 
 /*Personal Sign Up*/
 
-.personal-signup-box {
+.signup-form {
     width: 810px;
     margin: 25px auto 20px auto !important;
     background: #f2f2f2 !important;
 }
 
-.personal-signup-box p {
+.signup-form p {
     margin-bottom: 20px;
     color: #cecece;
     text-align: center;
 }
 
-.personal-signup-box input[type="submit"] {
+.signup-form input[type="submit"] {
     display: block;
     margin: 55px auto 32px;
     padding: .78571429em 2.5em .78571429em;
@@ -134,22 +134,29 @@
     display: inline-block;
 }
 
-.row .ui.input,
-.row .ui.selection {
-    width: 310px;
+.signup-form .field .input,
+.signup-form .field .selection,
+.ui.calendar {
+    width: 100%;
+    max-width: 460px;
+}
+
+.ui.form .field {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .required:after {
     content: '*';
     position: absolute;
-    left: 325px;
+    left: 475px;
     top: 0;
     color: #fd4d4d;
 }
 
 .sex-radio-group {
-    display: inline-block;
-    width: 310px;
+    width: 460px;
     line-height: 38px;
 }
 
@@ -186,7 +193,6 @@
 }
 
 .sidebar li:first-child,
-.total-price,
 .course-price,
 .coupons,
 .material-detail .views,
@@ -212,9 +218,13 @@
     border-bottom: 1px solid #d1d1d1;
 }
 
-.price {
+.total-price {
     margin-left: 5px;
     color: #ff4e4e;
+}
+
+p.total-price {
+    color: #888;
 }
 
 .no-promotion,
@@ -295,13 +305,10 @@
     margin-bottom: 5px;
 }
 
-.total-price {
-    margin-top: 35px;
-}
-
 .coupon-total {
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
 }
 
 .coupon-total h4 {
@@ -483,7 +490,7 @@ input[type="radio"].check-mark-radio {
 }
 
 @media screen and (max-width: 810px) {
-    .personal-signup-box {
+    .signup-form {
         width: auto;
         margin: 25px 20px 20px 20px !important;
     }
