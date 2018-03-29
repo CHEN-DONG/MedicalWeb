@@ -35,140 +35,145 @@
               </div> -->
     </header>
     <div class="container">
-        <div class="ui raised segment personal-signup-box">
-            <p>(注意事项 带有*为必填项)</p>
-            <div class="row">
-                <label for="name">姓名</label>
-                <div class="ui input required">
-                    <input type="text" id="name">
+        <form class="ui form segment">
+            <div class="ui raised segment signup-form">
+                <p>(注意事项 带有*为必填项)</p>
+                <div class="row field">
+                    <label for="name">姓名</label>
+                    <div class="ui input required">
+                        <input type="text" id="name" name="name">
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <label for="tel">手机号码</label>
-                <div class="ui left action input required">
-                    <div class="ui basic floating dropdown button" tabindex="0">
-                        <div class="text">+86</div>
+                <div class="row field">
+                    <label for="tel">手机号码</label>
+                    <div class="ui left action input required">
+                        <div class="ui basic floating dropdown button" tabindex="0">
+                            <div class="text">+86</div>
+                            <i class="dropdown icon"></i>
+                            <div class="menu" tabindex="-1">
+                                <div class="item">+886</div>
+                                <div class="item">+852</div>
+                                <div class="item">+853</div>
+                            </div>
+                        </div>
+                        <input type="text" id="tel" name=tel>
+                    </div>
+                </div>
+                <div class="row field">
+                    <label for="mail">邮箱</label>
+                    <div class="ui input required">
+                        <input type="text" id="mail" name="mail">
+                    </div>
+                </div>
+                <div class="row field">
+                    <label for="englishName">英文名</label>
+                    <div class="ui input">
+                        <input type="text" id="englishName">
+                    </div>
+                </div>
+                <div class="row field">
+                    <label for="credential">证件类型</label>
+                    <div class="ui left action input required">
+                        <div class="ui basic floating dropdown button" tabindex="0">
+                            <div class="text">身份证</div>
+                            <i class="dropdown icon"></i>
+                            <div class="menu" tabindex="-1">
+                                <div class="item">身份证</div>
+                                <div class="item">身份证</div>
+                                <div class="item">身份证</div>
+                            </div>
+                        </div>
+                        <input type="text" id="credential" name="credential">
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="gender">性别</label>
+                    <div class="sex-radio-group">
+                        <div>
+                            <label>男</label>
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="size" value="male">
+                                <label></label>
+                            </div>
+                        </div>
+                        <div>
+                            <label>女</label>
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="size" value="female">
+                                <label></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row field">
+                    <label for="birth">出生日期</label>
+                    <div class="ui calendar" id="birth">
+                        <div class="ui input left icon required">
+                            <i class="calendar icon"></i>
+                            <input type="text" placeholder="Date" value="2017-06-01" name="birth"> </div>
+                    </div>
+                </div>
+                <div class="row field">
+                    <label for="education">学历</label>
+                    <div class="ui search selection dropdown required">
+                        <input type="hidden" name="education" id="education">
                         <i class="dropdown icon"></i>
+                        <input class="search" tabindex="0">
+                        <div class="default text">请选择学历</div>
                         <div class="menu" tabindex="-1">
-                            <div class="item">+886</div>
-                            <div class="item">+852</div>
-                            <div class="item">+853</div>
+                            <div class="item" data-value="ad"><i class="ad flag"></i>本科</div>
+                            <div class="item" data-value="ae"><i class="ae flag"></i>硕士</div>
+
+                            <div class="item" data-value="zw"><i class="zw flag"></i>博士</div>
                         </div>
                     </div>
-                    <input type="text" id="tel">
                 </div>
-            </div>
-            <div class="row">
-                <label for="mail">邮箱</label>
-                <div class="ui input required">
-                    <input type="text" id="mail">
-                </div>
-            </div>
-            <div class="row">
-                <label for="englishName">英文名</label>
-                <div class="ui input">
-                    <input type="text" id="englishName">
-                </div>
-            </div>
-            <div class="row">
-                <label for="credential">证件类型</label>
-                <div class="ui left action input required">
-                    <div class="ui basic floating dropdown button" tabindex="0">
-                        <div class="text">身份证</div>
+                <div class="row field">
+                    <label for="positionalTitle">职称</label>
+                    <div class="ui search selection dropdown">
+                        <input type="hidden" name="education" id="positionalTitle">
                         <i class="dropdown icon"></i>
+                        <input class="search" tabindex="0">
+                        <div class="default text">请选择职称</div>
                         <div class="menu" tabindex="-1">
-                            <div class="item">身份证</div>
-                            <div class="item">身份证</div>
-                            <div class="item">身份证</div>
-                        </div>
-                    </div>
-                    <input type="text" id="credential">
-                </div>
-            </div>
-            <div class="row">
-                <label for="gender">性别</label>
-                <div class="inline fields sex-radio-group">
-                    <div class="field">
-                        <label>男</label>
-                        <div class="ui radio checkbox">
-                            <input type="radio" name="size" value="male">
-                            <label></label>
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label>女</label>
-                        <div class="ui radio checkbox">
-                            <input type="radio" name="size" value="female">
-                            <label></label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <label for="birth">出生日期</label>
-                <div class="ui calendar" id="birth">
-                    <div class="ui input left icon required">
-                        <i class="calendar icon"></i>
-                        <input type="text" placeholder="Date" value="2017-06-01"> </div>
-                </div>
-            </div>
-            <div class="row">
-                <label for="education">学历</label>
-                <div class="ui search selection dropdown required">
-                    <input type="hidden" name="education" id="education">
-                    <i class="dropdown icon"></i>
-                    <input class="search" tabindex="0">
-                    <div class="default text">请选择学历</div>
-                    <div class="menu" tabindex="-1">
-                        <div class="item" data-value="ad"><i class="ad flag"></i>本科</div>
-                        <div class="item" data-value="ae"><i class="ae flag"></i>硕士</div>
+                            <div class="item" data-value="ad"><i class="ad flag"></i>职称</div>
+                            <div class="item" data-value="ae"><i class="ae flag"></i>职称</div>
 
-                        <div class="item" data-value="zw"><i class="zw flag"></i>博士</div>
+                            <div class="item" data-value="zw"><i class="zw flag"></i>职称</div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <label for="positionalTitle">职称</label>
-                <div class="ui search selection dropdown">
-                    <input type="hidden" name="education" id="positionalTitle">
-                    <i class="dropdown icon"></i>
-                    <input class="search" tabindex="0">
-                    <div class="default text">请选择职称</div>
-                    <div class="menu" tabindex="-1">
-                        <div class="item" data-value="ad"><i class="ad flag"></i>职称</div>
-                        <div class="item" data-value="ae"><i class="ae flag"></i>职称</div>
+                <div class="row field">
+                    <label for="duties">职务</label>
+                    <div class="ui input required">
+                        <input type="text" id="duties" name="duties">
+                    </div>
+                </div>
+                <div class="row field">
+                    <label for="company">单位</label>
+                    <div class="ui input required">
+                        <input type="text" id="company" name="company">
+                    </div>
+                </div>
+                <div class="row field">
+                    <label for="address">地址</label>
+                    <div class="ui input required">
+                        <input type="text" id="address" name="address">
+                    </div>
+                </div>
+                <div class="row field">
+                    <label for="officeTel">办公电话</label>
+                    <div class="ui input required">
+                        <input type="text" id="officeTel" name="officeTel">
+                    </div>
+                </div>
 
-                        <div class="item" data-value="zw"><i class="zw flag"></i>职称</div>
-                    </div>
-                </div>
+                <input type="submit" class="ui button primary" value="提交">
+                <div class="ui error message"></div>
             </div>
-            <div class="row">
-                <label for="duties">职务</label>
-                <div class="ui input required">
-                    <input type="text" id="duties">
-                </div>
-            </div>
-            <div class="row">
-                <label for="company">单位</label>
-                <div class="ui input required">
-                    <input type="text" id="company">
-                </div>
-            </div>
-            <div class="row">
-                <label for="address">地址</label>
-                <div class="ui input required">
-                    <input type="text" id="address">
-                </div>
-            </div>
-            <div class="row">
-                <label for="officeTel">办公电话</label>
-                <div class="ui input required">
-                    <input type="text" id="officeTel">
-                </div>
-            </div>
-            <input type="submit" class="ui button primary" value="提交">
-        </div>
+        </form>
     </div>
+
     <footer>
         <div class="footer">
             <p>Copyright © 2018 CCS&ESS Meetings 2018. All Rights Reserved.</p>
@@ -184,7 +189,81 @@
         type: 'date'
     });
 
-    $("input").click(function() {
-        window.location.href = "meeting.html"
+    $(".ui.form").form({
+        name: {
+            identifier: 'name',
+            rules: [{
+                type: 'empty',
+                prompt: '姓名不能为空'
+            }]
+        },
+        tel: {
+            identifier: 'tel',
+            rules: [{
+                type: 'empty',
+                prompt: '手机号不能为空'
+            }]
+        },
+        mail: {
+            identifier: 'mail',
+            rules: [{
+                type: 'empty',
+                prompt: '邮箱不能为空'
+            }]
+        },
+        credential: {
+            identifier: 'credential',
+            rules: [{
+                type: 'empty',
+                prompt: '证件类型不能为空'
+            }]
+        },
+        birth: {
+            identifier: 'birth',
+            rules: [{
+                type: 'empty',
+                prompt: '出生日期不能为空'
+            }]
+        },
+        education: {
+            identifier: 'education',
+            rules: [{
+                type: 'empty',
+                prompt: '学历不能为空'
+            }]
+        },
+        duties: {
+            identifier: 'duties',
+            rules: [{
+                type: 'empty',
+                prompt: '学历不能为空'
+            }]
+        },
+        company: {
+            identifier: 'company',
+            rules: [{
+                type: 'empty',
+                prompt: '职务不能为空'
+            }]
+        },
+        address: {
+            identifier: 'address',
+            rules: [{
+                type: 'empty',
+                prompt: '地址不能为空'
+            }]
+        },
+        officeTel: {
+            identifier: 'officeTel',
+            rules: [{
+                type: 'empty',
+                prompt: '办公电话不能为空'
+            }]
+        },
+    }, {
+        onSuccess: function(e) {
+            e.preventDefault();
+            window.location.href = "meeting.html";
+        }
     });
 </script>

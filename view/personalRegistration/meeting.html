@@ -37,7 +37,7 @@
             <li>选择商品
             </li>
             <li>
-                <span class="active-slide-option">会议与课程</span><span class="price">1000元</span></li>
+                <span class="active-slide-option">会议与课程</span><span class="total-price"></span></li>
             <li>住宿费</li>
             <li>餐饮费</li>
             <li>资料费</li>
@@ -101,7 +101,7 @@
                 <h4>优惠券</h4>
                 <div>
                     <a class="coupons">有2张优惠券可用<i class="angle right icon"></i></a>
-                    <P class="total-price">费用合计 :<span class="price">1000</span> 元</P>
+                    <P class="total-price">费用合计 :<span class="total-price"></span></P>
                 </div>
             </div>
             <input type="submit" class="ui button primary float-right wide-btn" value="提交">
@@ -118,10 +118,20 @@
 
 </html>
 <script>
-    $("input").click(function() {
+    $(":submit").click(function() {
         window.location.href = "hotel.html";
     });
     $(".detail-btn").click(function() {
         window.location.href = "materialDetail.html";
+    });
+    $(":checkbox").click(function() {
+        var meetingPrice = 0;
+        var checked = $($(':checkbox:checked'));
+        for (var i = 0; i < checked.length; i++) {
+            meetingPrice += parseInt($(checked[i]).parent("li").find(".price").text());
+        }
+        $("span.total-price").each(function(i) {
+            $(this).text(meetingPrice + "元");
+        });
     });
 </script>
