@@ -204,6 +204,10 @@
     margin-bottom: 13px;
 }
 
+.course-price span:last-child {
+    color: #ff4e4e;
+}
+
 .sidebar li:first-child:before {
     content: "";
     position: absolute;
@@ -403,7 +407,11 @@ input[type="radio"].check-mark-radio+label:before {
 }
 
 input[type="radio"]:checked.check-mark-radio+label:before {
-    background: url(../image/check-mark.png) no-repeat center center;
+    background: url(../image/select.png) no-repeat center center;
+}
+
+input[type="radio"]:checked:disabled.check-mark-radio+label:before {
+    background: url(../image/select-disable.png) no-repeat center center;
 }
 
 input[type="radio"].check-mark-radio {
@@ -472,6 +480,11 @@ input[type="radio"].check-mark-radio {
     line-height: 45px;
     border: 1px solid #d9d9d9;
     text-align: center;
+}
+
+.pay-type a:focus {
+    border: 2px solid #ff4e4e;
+    color: #fc6565 !important;
 }
 
 .pay-type img {

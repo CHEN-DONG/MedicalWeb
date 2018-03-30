@@ -36,10 +36,10 @@
         <ul class="sidebar float-left">
             <li>选择商品
             </li>
-            <li>会议与课程<span class="total-price">1000元</span></li>
-            <li>住宿费<span class="total-price">1400元</span></li>
-            <li>餐饮费<span class="total-price">1400元</span></li>
-            <li><span class="active-slide-option">资料费</span></li>
+            <li>会议与课程<span class="total-price meeting-price"></span></li>
+            <li>住宿费<span class="total-price hotel-price"></span></li>
+            <li>餐饮费<span class="total-price catering-price"></span></li>
+            <li class="active-slide-option">资料费<span class="total-price material-price"></span></li>
         </ul>
         <div class="content">
             <ul class="content-list">
@@ -51,10 +51,10 @@
                         <p class="promotion">3月1日支付优惠500元</p>
                         <div class="course-price">
                             <span class="original-price">费用1000元</span> 优惠后
-                            <span class="price">500</span>
+                            <span value="500">500</span>
                         </div>
                     </div>
-                    <input type="button" class="ui button primary middle-btn" value="详情">
+                    <input type="button" class="ui button primary middle-btn detail-btn" value="详情">
                 </li>
                 <li>
                     <input id="checkbox2" type="checkbox" class="check-mark-radio">
@@ -64,10 +64,10 @@
                         <p class="no-promotion">暂无优惠</p>
                         <div class="course-price">
                             费用
-                            <span class="price">1000</span>
+                            <span value="1000">1000</span>
                         </div>
                     </div>
-                    <input type="button" class="ui button primary middle-btn" value="详情">
+                    <input type="button" class="ui button primary middle-btn detail-btn" value="详情">
                 </li>
                 <li>
                     <input id="checkbox3" type="checkbox" class="check-mark-radio">
@@ -77,10 +77,10 @@
                         <p class="promotion">3月1日支付优惠500元</p>
                         <div class="course-price">
                             <span class="original-price">费用1000元</span> 优惠后
-                            <span class="price">1000</span>
+                            <span value="500">500</span>
                         </div>
                     </div>
-                    <input type="button" class="ui button primary middle-btn" value="详情">
+                    <input type="button" class="ui button primary middle-btn detail-btn" value="详情">
                 </li>
                 <li>
                     <input id="checkbox4" type="checkbox" class="check-mark-radio">
@@ -90,17 +90,17 @@
                         <p class="no-promotion">暂无优惠</p>
                         <div class="course-price">
                             费用
-                            <span class="price">1000</span>
+                            <span value="1000">1000</span>
                         </div>
                     </div>
-                    <input type="button" class="ui button primary middle-btn" value="详情">
+                    <input type="button" class="ui button primary middle-btn detail-btn" value="详情">
                 </li>
             </ul>
             <div class="coupon-total">
                 <h4>优惠券</h4>
                 <div>
                     <a class="coupons">有2张优惠券可用<i class="angle right icon"></i></a>
-                    <P class="total-price">费用合计 :<span class="price">500</span> 元</P>
+                    <P class="total-price">费用合计 :<span class="total-price material-price"></span></P>
                 </div>
             </div>
             <input type="submit" class="ui button primary float-right wide-btn" value="提交">
@@ -116,6 +116,38 @@
 
 </html>
 <script>
+    var calculatePrice = function() {
+        var materialPrice = 0;
+        var checked = $($(':checkbox:checked'));
+        for (var i = 0; i < checked.length; i++) {
+            materialPrice += parseInt($(checked[i]).parent("li").find("span:last").attr("value"));
+        }
+        return materialPrice;
+    }
+    $(document).ready(function() {
+        $(".material-price").each(function(i) {
+            $(this).text(calculatePrice() + "元");
+        });
+    });
+    $(":submit").click(function() {
+        sessionStorage.setItem("materialPrice", calculatePrice());
+        window.location.href = "hotel.html";
+    });
+    $(".detail-btn").click(function() {
+        window.location.href = "materialDetail.html";
+    });
+    $(":checkbox").click(function() {
+        $(".material-price").each(function(i) {
+            $(this).text(calculatePrice() + "元");
+        });
+    });
+
+
+
+
+    $(".meeting-price").text(sessionStorage.meetingPrice + "元");
+    $(".hotel-price").text(sessionStorage.hotelPrice + "元");
+    $(".catering-price").text(sessionStorage.cateringPrice + "元");
     $(":submit").click(function() {
         window.location.href = "pay.html";
     });
