@@ -3,8 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="user-scalable=yes">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../../assets/css/semantic.min.css" rel="stylesheet">
     <link href="../../assets/css/style.css" rel="stylesheet">
     <link href="../../css/common.css" rel="stylesheet">
@@ -69,11 +72,11 @@
 </html>
 <script>
     $(document).ready(function() {
-        $(".meeting-price").text(sessionStorage.meetingPrice + "元");
-        $(".hotel-price").text(sessionStorage.hotelPrice + "元");
-        $(".catering-price").text(sessionStorage.cateringPrice + "元");
-        $(".material-price").text(sessionStorage.materialPrice + "元");
-        $(".final-price").text(sessionStorage.finalPrice + "元");
+        $(".meeting-price").text(sessionStorage.meetingPrice != undefined ? sessionStorage.meetingPrice + "元" : "0元");
+        $(".hotel-price").text(sessionStorage.hotelPrice != undefined ? sessionStorage.hotelPrice + "元" : "0元");
+        $(".catering-price").text(sessionStorage.cateringPrice != undefined ? sessionStorage.cateringPrice + "元" : "0元");
+        $(".material-price").text(sessionStorage.materialPrice != undefined ? sessionStorage.materialPrice + "元" : "0元");
+        $(".final-price").text(sessionStorage.finalPrice != undefined ? sessionStorage.finalPrice + "元" : "0元");
     });
     $("a").click(function() {
         $(".pay-selected").removeClass("pay-selected");

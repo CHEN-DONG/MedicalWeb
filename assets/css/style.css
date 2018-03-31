@@ -111,9 +111,7 @@
 /*Personal Sign Up*/
 
 .signup-form {
-    width: 810px;
     margin: 25px auto 20px auto !important;
-    background: #f2f2f2 !important;
 }
 
 .signup-form p {
@@ -558,15 +556,163 @@ input[type="radio"].check-mark-radio {
     cursor: pointer;
 }
 
+
+/*agendaDetail*/
+
+.agenda-info {
+    padding: 25px 25px;
+    border-bottom: 1px solid #d1d1d1;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.agenda-info li {
+    list-style: none;
+}
+
+.agenda-info li:nth-child(1) {
+    padding-left: 26px;
+    background: url(../image/date.png) no-repeat left center;
+}
+
+.agenda-info li:nth-child(2) {
+    padding-left: 26px;
+    background: url(../image/time.png) no-repeat left center;
+    color: #c8c8c8;
+}
+
+.agenda-info li:nth-child(3) {
+    padding-left: 26px;
+    background: url(../image/location.png) no-repeat left center;
+}
+
+.agenda-info li:nth-child(4) {
+    padding-left: 26px;
+    background: url(../image/activity.png) no-repeat left center;
+    color: #c8c8c8;
+}
+
+.agenda-info+p {
+    margin: 15px 0 0 40px;
+    color: #1c9cfe;
+    font-size: 13px;
+}
+
+.presenter-list li,
+.academia-list li {
+    display: flex;
+    align-items: center;
+    margin-left: 25px;
+    border-bottom: 1px solid #e6e6e6;
+    list-style: none;
+}
+
+.presenter-list li img,
+.academia-list li img {
+    margin: 15px 10px 15px 0;
+}
+
+.academia-list div p:nth-child(2) {
+    color: #888
+}
+
+.academia-list div p:nth-child(3) {
+    color: #c8c8c8
+}
+
+.academia-list {
+    margin-bottom: 50px;
+}
+
+.next-agenda p {
+    color: #1c9cfe;
+    display: inline-block;
+}
+
+.next-agenda p:first-of-type {
+    margin: 35px 50px 35px 25px;
+}
+
+.next-agenda p:nth-of-type(2) {
+    color: #888;
+    margin-right: 95px;
+}
+
+.next-agenda span {
+    color: #888;
+    margin-right: 15px;
+}
+
+.next-agenda+p {
+    margin-left: 25px;
+    color: #888;
+}
+
+
+/*agenda*/
+
+.agenda-search {
+    margin-top: 25px;
+}
+
+.agenda-search .input {
+    margin-right: 20px;
+}
+
+.agenda-search .ui.icon.button {
+    padding: .78571429em 2em .78571429em;
+}
+
+.agenda-table {
+    height: calc(100vh - 250px);
+    margin: 30px 0;
+    padding-right: 75px;
+    border-bottom: 1px solid rgba(34, 36, 38, 0.15);
+    border-radius: 5px;
+    overflow-y: auto;
+}
+
+.agenda-table .ui.table thead th:first-child {
+    background: #45b9d6;
+    color: #fff;
+    font-size: 20px;
+    width: 50px;
+}
+
+.agenda-table .ui.table thead th {
+    background: #f2f2f2;
+}
+
+.agenda-table .ui.table tbody td {
+    font-size: 17px;
+}
+
+.agenda-table td:first-child p {
+    text-align: center;
+}
+
+.agenda-table td:first-child p:nth-child(1) {
+    color: #888;
+}
+
+.agenda-table td:first-child p:nth-child(2) {
+    font-size: 23px;
+}
+
+.agenda-table td:first-child p:nth-child(3) {
+    color: #c8c8c8;
+}
+
+.agenda-table td p:first-child {
+    text-align: center;
+    color: #888;
+}
+
 @media screen and (max-width: 1200px) {
     .container {
         width: 100%;
     }
-}
-
-@media screen and (max-width: 810px) {
     .signup-form {
-        width: auto;
         margin: 25px 20px 20px 20px !important;
     }
 }
