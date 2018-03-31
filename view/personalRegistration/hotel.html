@@ -41,7 +41,7 @@
             <li>餐饮费</li>
             <li>资料费</li>
         </ul>
-        <div class="content">
+        <div class="main-content">
             <ul class="hotel-list">
                 <li>
                     <img src="../../assets/image/hotel.png">
@@ -96,8 +96,9 @@
 
 </html>
 <script>
-    $(".meeting-price").text(sessionStorage.meetingPrice + "元");
-
+    $(document).ready(function() {
+        $(".meeting-price").text(sessionStorage.meetingPrice + "元");
+    });
     $("input").click(function() {
         window.location.href = "hotelDetail.html";
     });

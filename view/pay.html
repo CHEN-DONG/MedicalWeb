@@ -113,6 +113,44 @@
         display: block;
         margin: 0 auto;
     }
+    
+    .pay-type a.pay-selected {
+        position: relative;
+        border: 2px solid #f97878;
+    }
+    
+    .pay-type a.pay-selected:after {
+        content: "";
+        box-sizing: border-box;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 0;
+        height: 5px;
+        border-bottom: 25px;
+        border-right: 2px;
+        border: 10px solid;
+        border-color: transparent #f97878 #f97878 transparent;
+    }
+    
+    .pay-type a.pay-selected:before {
+        font-family: Icons;
+        content: "\f00c";
+        box-sizing: border-box;
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        line-height: 10px;
+        z-index: 1;
+        color: #fff;
+        font-size: 13px;
+    }
 </style>
+<script>
+    $("a").click(function() {
+        $(".pay-selected").removeClass("pay-selected");
+        $(this).addClass("pay-selected");
+    });
+</script>
 
 </html>

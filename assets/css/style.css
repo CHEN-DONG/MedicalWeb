@@ -4,6 +4,17 @@
     overflow: auto;
 }
 
+@font-face {
+    font-family: Icons;
+    src: url(themes/default/assets/fonts/icons.eot);
+    src: url(themes/default/assets/fonts/icons.eot?#iefix) format('embedded-opentype'), url(themes/default/assets/fonts/icons.woff2) format('woff2'), url(themes/default/assets/fonts/icons.woff) format('woff'), url(themes/default/assets/fonts/icons.ttf) format('truetype'), url(themes/default/assets/fonts/icons.svg#icons) format('svg');
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-decoration: inherit;
+    text-transform: none
+}
+
 .container {
     width: 1200px;
     min-height: calc(100vh - 165px);
@@ -183,13 +194,13 @@
 .sidebar li {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 190px;
     height: 40px;
     position: relative;
     padding: 0 14px;
     list-style: none;
     font-size: 16px;
-    line-height: 40px;
 }
 
 .sidebar li:first-child,
@@ -242,7 +253,7 @@ p.total-price {
     color: #1c9cfe;
 }
 
-.content {
+.main-content {
     margin: 15px 50px 0 276px;
     padding-top: 1px;
 }
@@ -480,11 +491,39 @@ input[type="radio"].check-mark-radio {
     line-height: 45px;
     border: 1px solid #d9d9d9;
     text-align: center;
+    cursor: pointer;
 }
 
-.pay-type a:focus {
-    border: 2px solid #ff4e4e;
-    color: #fc6565 !important;
+.pay-type a.pay-selected {
+    position: relative;
+    border: 2px solid #f97878;
+}
+
+.pay-type a.pay-selected:after {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 5px;
+    border-bottom: 25px;
+    border-right: 2px;
+    border: 10px solid;
+    border-color: transparent #f97878 #f97878 transparent;
+}
+
+.pay-type a.pay-selected:before {
+    font-family: Icons;
+    content: "\f00c";
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    line-height: 10px;
+    z-index: 1;
+    color: #fff;
+    font-size: 13px;
 }
 
 .pay-type img {
@@ -494,6 +533,29 @@ input[type="radio"].check-mark-radio {
 
 .pay-type p {
     margin: 25px 0;
+}
+
+.sidebar li span.final-price {
+    line-height: 70px;
+}
+
+.sidebar div {
+    display: flex;
+    justify-content: space-between;
+    width: 190px;
+    height: 70px;
+    line-height: 90px;
+    padding: 0 14px;
+    font-size: 16px;
+    border-bottom: 1px solid #d1d1d1;
+}
+
+.sidebar a {
+    float: right;
+    margin: 14px;
+    text-decoration: underline;
+    color: #4183c4;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 1200px) {

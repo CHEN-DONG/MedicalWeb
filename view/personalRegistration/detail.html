@@ -36,12 +36,12 @@
         <ul class="sidebar float-left">
             <li>选择商品
             </li>
-            <li>会议与课程<span class="price">1000元</span></li>
-            <li>住宿费<span class="price">1400元</span></li>
-            <li>餐饮费<span class="price">1400元</span></li>
-            <li><span class="active-slide-option">资料费</span></li>
+            <li>会议与课程<span class="total-price meeting-price"></span></li>
+            <li>住宿费<span class="total-price hotel-price"></span></li>
+            <li>餐饮费<span class="total-price catering-price"></span></li>
+            <li>资料费<span class="total-price material-price"></span></li>
         </ul>
-        <div class="content">
+        <div class="main-content">
             <div class="material-detail">
                 <h4>博览中心参考观察2018世界科技制造大会</h4>
                 <span class="date">2018-12-06</span>
@@ -62,6 +62,12 @@
 
 </html>
 <script>
+    $(document).ready(function() {
+        $(".meeting-price").text(sessionStorage.meetingPrice + "元");
+        $(".hotel-price").text(sessionStorage.hotelPrice + "元");
+        $(".catering-price").text(sessionStorage.cateringPrice + "元");
+        $(".material-price").text(sessionStorage.materialPrice + "元");
+    });
     $("input").click(function() {
         window.location.href = "meeting.html";
     });

@@ -42,7 +42,7 @@
             <li>餐饮费<span class="total-price catering-price"></span></li>
             <li>资料费</li>
         </ul>
-        <div class="content">
+        <div class="main-content">
             <ul class="content-list">
                 <li>
                     <input id="checkbox1" type="checkbox" class="check-mark-radio">
@@ -114,14 +114,30 @@
             <p>京ICP备13020642号-20 京公网备案11010502025794</p>
         </div>
     </footer>
+    <div class="ui modal small">
+        <i class="close icon"></i>
+        <div class="header">
+            提示
+        </div>
+        <div class="image content">
+            <div class="description">
+                请选择会议！
+            </div>
+        </div>
+        <div class="actions">
+            <div class="ui cancel button">关闭</div>
+        </div>
+    </div>
 </body>
 
 </html>
 <script>
+    $('.ui.modal').modal();
     var calculatePrice = function() {
         var meetingPrice = 0;
-        var checked = $($(':checkbox:checked'));
+        var checked = $(':checkbox:checked');
         for (var i = 0; i < checked.length; i++) {
+            var checked = $($(':checkbox:checked'));
             meetingPrice += parseInt($(checked[i]).parent("li").find("span:last").attr("value"));
         }
         return meetingPrice;
@@ -132,11 +148,17 @@
         });
     });
     $(":submit").click(function() {
-        sessionStorage.setItem("meetingPrice", calculatePrice());
-        window.location.href = "hotel.html";
+        var checked = $(':checkbox:checked');
+        if (checked.length == 0) {
+            $('.ui.modal')
+                .modal('show');
+        } else {
+            sessionStorage.setItem("meetingPrice", calculatePrice());
+            window.location.href = "hotel.html";
+        }
     });
     $(".detail-btn").click(function() {
-        window.location.href = "materialDetail.html";
+        window.location.href = "detail.html";
     });
     $(":checkbox").click(function() {
         $(".meeting-price").each(function(i) {

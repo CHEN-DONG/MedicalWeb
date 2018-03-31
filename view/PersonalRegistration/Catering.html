@@ -41,7 +41,7 @@
             <li class="active-slide-option">餐饮费<span class="total-price catering-price"></span></li>
             <li>资料费</li>
         </ul>
-        <div class="content">
+        <div class="main-content">
             <div class="bfc">
                 <table class="ui collapsing celled table hotel-table">
                     <thead>
@@ -144,6 +144,20 @@
             <p>京ICP备13020642号-20 京公网备案11010502025794</p>
         </div>
     </footer>
+    <div class="ui modal small">
+        <i class="close icon"></i>
+        <div class="header">
+            提示
+        </div>
+        <div class="image content">
+            <div class="description">
+                请选择餐饮！
+            </div>
+        </div>
+        <div class="actions">
+            <div class="ui cancel button">关闭</div>
+        </div>
+    </div>
 </body>
 
 </html>
@@ -152,7 +166,7 @@
         var hotelPrice = 0;
         var hotelInfo = $(".accommodations");
         $(hotelInfo).find($("h4")).nextAll().remove();
-        var checked = $($(':radio:checked'));
+        var checked = $(':radio:checked');
         var hotelInfoArr = new Array();
         for (var i = 0; i < checked.length; i++) {
             hotelPrice += parseInt($(checked[i]).attr('data-price'));
@@ -173,20 +187,22 @@
         $(".catering-price").each(function(i) {
             $(this).text(calculatePrice() + "元");
         });
+        $(".meeting-price").text(sessionStorage.meetingPrice + "元");
+        $(".hotel-price").text(sessionStorage.hotelPrice + "元");
     });
-
     $(":radio").click(function(e) {
         $(".catering-price").each(function(i) {
             $(this).text(calculatePrice() + "元");
         });
     });
-
-
-
     $(":submit").click(function() {
-        sessionStorage.setItem("cateringPrice", calculatePrice());
-        window.location.href = "material.html";
+        var checked = $(':radio:checked');
+        if (checked.length == 0) {
+            $('.ui.modal')
+                .modal('show');
+        } else {
+            sessionStorage.setItem("cateringPrice", calculatePrice());
+            window.location.href = "material.html";
+        }
     });
-    $(".meeting-price").text(sessionStorage.meetingPrice + "元");
-    $(".hotel-price").text(sessionStorage.hotelPrice + "元");
 </script>

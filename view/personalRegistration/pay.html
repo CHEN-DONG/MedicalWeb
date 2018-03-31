@@ -26,24 +26,26 @@
             <a class="item">登录</a>
             <a class="item hide">个人中心</a>
         </div>
-        <!-- <div class="ui borderless btm-sub menu">
+        <div class="ui borderless btm-sub menu">
             <a class="item active">组织架构</a>
             <a class="item">参会专家</a>
             <a class="item">会议日程</a>
-          </div> -->
+        </div>
     </header>
     <div class="container">
         <ul class="sidebar float-left">
             <li>选择商品
             </li>
-            <li>会议与课程<span class="price">1000元</span></li>
-            <li>住宿费<span class="price">1400元</span></li>
-            <li>餐饮费<span class="price">1400元</span></li>
-            <li><span class="active-slide-option">资料费</span></li>
+            <li>会议与课程<span class="total-price meeting-price"></span></li>
+            <li>住宿费<span class="total-price hotel-price"></span></li>
+            <li>餐饮费<span class="total-price catering-price"></span></li>
+            <li>资料费<span class="total-price material-price"></span></li>
+            <div>合计<span class="total-price final-price"></span></div>
+            <a>去支付</a>
         </ul>
-        <div class="content">
+        <div class="main-content">
             <div>
-                <p class="amount">支付金额：<span>47000元</span></p>
+                <p class="amount">支付金额：<span class="final-price"></span></p>
             </div>
             <div class="pay-type">
                 <p>请选择您的支付方式</p>
@@ -66,4 +68,15 @@
 
 </html>
 <script>
+    $(document).ready(function() {
+        $(".meeting-price").text(sessionStorage.meetingPrice + "元");
+        $(".hotel-price").text(sessionStorage.hotelPrice + "元");
+        $(".catering-price").text(sessionStorage.cateringPrice + "元");
+        $(".material-price").text(sessionStorage.materialPrice + "元");
+        $(".final-price").text(sessionStorage.finalPrice + "元");
+    });
+    $("a").click(function() {
+        $(".pay-selected").removeClass("pay-selected");
+        $(this).addClass("pay-selected");
+    });
 </script>
