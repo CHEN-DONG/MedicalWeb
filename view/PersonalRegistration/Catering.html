@@ -26,22 +26,22 @@
             <a class="item">登录</a>
             <a class="item hide">个人中心</a>
         </div>
-        <!-- <div class="ui borderless btm-sub menu">
+        <div class="ui borderless btm-sub menu">
             <a class="item active">组织架构</a>
             <a class="item">参会专家</a>
             <a class="item">会议日程</a>
-          </div> -->
+        </div>
     </header>
     <div class="container">
         <ul class="sidebar float-left">
             <li>选择商品
             </li>
-            <li>会议与课程<span class="price">1000元</span></li>
-            <li>住宿费<span class="price">1400元</span></li>
-            <li><span class="active-slide-option">餐饮费</span></li>
+            <li>会议与课程<span class="total-price meeting-price"></span></li>
+            <li>住宿费<span class="total-price hotel-price"></span></li>
+            <li class="active-slide-option">餐饮费<span class="total-price catering-price"></span></li>
             <li>资料费</li>
         </ul>
-        <div class="content">
+        <div class="main-content">
             <div class="bfc">
                 <table class="ui collapsing celled table hotel-table">
                     <thead>
@@ -59,19 +59,19 @@
                                 午餐
                             </td>
                             <td>
-                                <input type="radio" id="1" name="date3-1" class="check-mark-radio" />
+                                <input type="radio" id="1" name="mar1" data-price="100" data-date="3月1日" data-room="午餐" class="check-mark-radio" />
                                 <label for="1"></label>
                             </td>
                             <td>
-                                <input type="radio" id="2" name="date3-2" class="check-mark-radio" />
+                                <input type="radio" id="2" name="mar2" data-price="100" data-date="3月2日" data-room="午餐" class="check-mark-radio" />
                                 <label for="2"></label>
                             </td>
                             <td>
-                                <input type="radio" id="3" name="date3-3" class="check-mark-radio" />
+                                <input type="radio" id="3" name="mar3" data-price="100" data-date="3月3日" data-room="午餐" class="check-mark-radio" disabled="disabled" />
                                 <label for="3"></label>
                             </td>
                             <td>
-                                <input type="radio" id="4" name="date3-4" class="check-mark-radio" />
+                                <input type="radio" id="4" name="mar4" data-price="100" data-date="3月4日" data-room="午餐" class="check-mark-radio" />
                                 <label for="4"></label>
                             </td>
                         </tr>
@@ -80,19 +80,19 @@
                                 晚餐
                             </td>
                             <td>
-                                <input type="radio" id="5" name="date3-1" class="check-mark-radio" />
+                                <input type="radio" id="5" name="mar1" data-price="200" data-date="3月1日" data-room="晚餐" class="check-mark-radio" />
                                 <label for="5"></label>
                             </td>
                             <td>
-                                <input type="radio" id="6" name="date3-2" class="check-mark-radio" />
+                                <input type="radio" id="6" name="mar2" data-price="200" data-date="3月2日" data-room="晚餐" class="check-mark-radio" />
                                 <label for="6"></label>
                             </td>
                             <td>
-                                <input type="radio" id="7" name="date3-3" class="check-mark-radio" />
+                                <input type="radio" id="7" name="mar3" data-price="200" data-date="3月3日" data-room="晚餐" class="check-mark-radio" disabled="disabled" />
                                 <label for="7"></label>
                             </td>
                             <td>
-                                <input type="radio" id="8" name="date3-4" class="check-mark-radio" />
+                                <input type="radio" id="8" name="mar4" data-price="200" data-date="3月4日" data-room="晚餐" class="check-mark-radio" />
                                 <label for="8"></label>
                             </td>
                         </tr>
@@ -101,26 +101,26 @@
                                 晚宴
                             </td>
                             <td>
-                                <input type="radio" id="9" name="date3-1" class="check-mark-radio" />
+                                <input type="radio" id="9" name="mar1" data-price="300" data-date="3月1日" data-room="晚宴" class="check-mark-radio" />
                                 <label for="9"></label>
                             </td>
                             <td>
-                                <input type="radio" id="10" name="date3-2" class="check-mark-radio" />
+                                <input type="radio" id="10" name="mar2" data-price="300" data-date="3月2日" data-room="晚宴" class="check-mark-radio" />
                                 <label for="10"></label>
                             </td>
                             <td>
-                                <input type="radio" id="11" name="date3-3" class="check-mark-radio" />
+                                <input type="radio" id="11" name="mar3" data-price="300" data-date="3月3日" data-room="晚宴" class="check-mark-radio" checked="checked" disabled="disabled" />
                                 <label for="11"></label>
                             </td>
                             <td>
-                                <input type="radio" id="12" name="date3-4" class="check-mark-radio" />
+                                <input type="radio" id="12" name="mar4" data-price="300" data-date="3月4日" data-room="晚宴" class="check-mark-radio" />
                                 <label for="12"></label>
                             </td>
                         </tr>
                     </tbody>
                 </table>
                 <div class="hotel-remark">
-                    <p>您订购了xxxx会议 赠送您<span>3月3日</span>大床房一晚</p>
+                    <p>您订购了xxxx会议 赠送您<span>3月3日</span>晚宴</p>
                     <p>酒店备注：是出差入住酒店吧？首先一点，发票备注是可有可无的，最重要的是发票抬头和发票明细，不是发票备注，发票抬头写你们公司，明细写住宿费，开票时间就是最好的时间证明，不用卸载备注，回头给财务报销的时候最多让你在发票背面签个这里最多200字。</p>
                 </div>
             </div>
@@ -132,7 +132,7 @@
                 <h4>优惠券</h4>
                 <div>
                     <a class="coupons">有2张优惠券可用<i class="angle right icon"></i></a>
-                    <P class="total-price">费用合计 :<span class="price">500</span> 元</P>
+                    <P class="total-price">费用合计 :<span class="total-price catering-price"></span></P>
                 </div>
             </div>
             <input type="submit" class="ui button primary float-right wide-btn" value="提交">
@@ -144,11 +144,65 @@
             <p>京ICP备13020642号-20 京公网备案11010502025794</p>
         </div>
     </footer>
+    <div class="ui modal small">
+        <i class="close icon"></i>
+        <div class="header">
+            提示
+        </div>
+        <div class="image content">
+            <div class="description">
+                请选择餐饮！
+            </div>
+        </div>
+        <div class="actions">
+            <div class="ui cancel button">关闭</div>
+        </div>
+    </div>
 </body>
 
 </html>
 <script>
+    var calculatePrice = function() {
+        var hotelPrice = 0;
+        var hotelInfo = $(".accommodations");
+        $(hotelInfo).find($("h4")).nextAll().remove();
+        var checked = $(':radio:checked');
+        var hotelInfoArr = new Array();
+        for (var i = 0; i < checked.length; i++) {
+            hotelPrice += parseInt($(checked[i]).attr('data-price'));
+            hotelInfoArr.push({
+                hotelInfoDom: $("<p>" + $(checked[i]).attr('data-date') + "" + $(checked[i]).attr('data-room') + " " + $(checked[i]).attr('data-price') + "元</P>"),
+                cell: $(checked[i]).parent().index(),
+            });
+        }
+        hotelInfoArr.sort(function(a, b) {
+            return a.cell - b.cell;
+        })
+        for (var j = 0; j < hotelInfoArr.length; j++) {
+            $(hotelInfo).append($(hotelInfoArr[j].hotelInfoDom));
+        }
+        return hotelPrice;
+    }
+    $(document).ready(function() {
+        $(".catering-price").each(function(i) {
+            $(this).text(calculatePrice() + "元");
+        });
+        $(".meeting-price").text(sessionStorage.meetingPrice + "元");
+        $(".hotel-price").text(sessionStorage.hotelPrice + "元");
+    });
+    $(":radio").click(function(e) {
+        $(".catering-price").each(function(i) {
+            $(this).text(calculatePrice() + "元");
+        });
+    });
     $(":submit").click(function() {
-        window.location.href = "material.html";
+        var checked = $(':radio:checked');
+        if (checked.length == 0) {
+            $('.ui.modal')
+                .modal('show');
+        } else {
+            sessionStorage.setItem("cateringPrice", calculatePrice());
+            window.location.href = "material.html";
+        }
     });
 </script>
