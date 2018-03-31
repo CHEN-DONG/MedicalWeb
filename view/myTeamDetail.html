@@ -3,13 +3,17 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="user-scalable=yes">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="white">
   <link rel="stylesheet" href="../assets/css/semantic.min.css">
   <link rel="stylesheet" href="../css/common.css">
   <script src="../assets/js/jquery.min.js"></script>
   <script src="../assets/js/semantic.min.js"></script>
   <script src="../js/home.js"></script>
+  <script src="../assets/js/provinces.js"></script>
+  <script src="../assets/js/cities.js"></script>
   <title>我的团体</title>
 </head>
 
@@ -72,6 +76,23 @@
         <label>部门名称：</label>
         <input type="text" placeholder="请输入部门名称" name="">
       </div>
+      <div class="inline center fields">
+        <label>省：</label>
+        <div class="field">
+          <div class="ui selection dropdown province">
+            <div class="text"></div>
+            <i class="dropdown icon"></i>
+          </div>
+        </div>
+        <label>市：</label>
+        <div class="field">
+            <div class="ui selection dropdown city">
+              <div class="text"></div>
+              <i class="dropdown icon"></i>
+            </div>
+          </div>
+      </div>
+
       <div class="inline center field">
         <label>详细地址：</label>
         <input type="text" style="width:500px" placeholder="请输入详细地址" name="">
@@ -112,4 +133,20 @@
     </div>
   </footer>
 </body>
+<script>
+  $('.ui.dropdown.province').dropdown({
+    values: _provinces,
+    placeholder: "请选择",
+    onChange: function(value, text, $choice){
+      var fitCities =  _cities.filter(function(code){
+        return value === code.provinceCode;
+      });
+      $('.ui.dropdown.city').dropdown({
+        values: fitCities,
+        placeholder: "请选择",
+      });
+    }
+  });
+</script>
+
 </html>

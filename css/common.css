@@ -194,9 +194,13 @@ header {
   align-items: center
 }
 
+.ui.form .inline.center.field>label:first-child,
+.ui.form .inline.center.fields>label:first-child{
+  min-width: 30%;
+}
+
 .ui.form .inline.center.field>label,
 .ui.form .inline.center.fields>label {
-  min-width: 30%;
   text-align: right;
   font-size: 16px;
   font-weight: 600;
@@ -746,4 +750,30 @@ header {
 
 .operation p{
   color: #008bd7;
+}
+
+/* exportPersonal */
+.export-section{
+  margin-bottom: 50px;
+}
+
+.export-section .download{
+  margin-top: 10px;
+}
+
+.export-section .ui.button.table-del{
+  border-radius: 10px;
+  color: #008bd7;
+  background-color: #fff;
+  border: 1px solid #008bd7;
+  padding: 5px 10px;
+}
+
+.export-section .ui.button.table-del:hover{
+  color: #fff;
+  background-color: #008bd7;
+}
+
+.export-section .personnel tr{
+  text-align: center;
 }

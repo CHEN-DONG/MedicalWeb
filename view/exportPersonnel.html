@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="user-scalable=yes">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="white">
+  <link rel="stylesheet" href="../assets/css/semantic.min.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <script src="../assets/js/jquery.min.js"></script>
+  <script src="../assets/js/semantic.min.js"></script>
+  <script src="../js/home.js"></script>
+  <title>导入人员信息</title>
+</head>
+
+<body>
+  <header>
+    <div class="ui borderless top menu">
+      <div class="logo">
+        <a href="./home.html">
+          <img src="../assets/image/logo.png">
+        </a>
+      </div>
+      <div class="right menu">
+        <a class="item" href="./home.html">首页</a>
+        <a class="item">参会指南</a>
+        <a class="item">参会报名</a>
+        <a class="item">会议动态</a>
+        <a class="item">会议视频</a>
+        <a class="item">会议征文</a>
+        <a class="item">关于我们</a>
+        <a class="item hide" href="./login.html">登录</a>
+        <a class="item active">个人中心</a>
+      </div>
+    </div>
+    <div class="banner bgi" style="background-image: url('../assets/image/banner.png')"></div>
+  </header>
+  <main class="topnav main">
+    <div class="export-section">
+      <h3 class="list-title">操作须知</h3>
+      <p>1.表格必须严格按照标准信息填写</p>
+      <p>2.在统计信息时，请务必保证信息真实准确</p>
+      <button class="ui blue download button " style="width:300px">点击下载标准人员信息Excel表格</button>
+    </div>
+    <div class="export-section">
+      <h3 class="list-title">选择文件批量导入人员信息</h3>
+      <div class="ui input">
+        <input type="file" placeholder="点击选择文件">
+      </div>
+      <button class="ui blue button">导入</button>
+    </div>
+    <div class="export-section">
+      <h3 class="list-title">已导入人员列表</h3>
+      <table class="ui celled personnel table">
+        <thead>
+          <tr>
+            <th>姓名</th>
+            <th>手机号</th>
+            <th>参会人员类型</th>
+            <th>职称</th>
+            <th>职务</th>
+            <th>省份</th>
+            <th>证件号</th>
+            <th>学士</th>
+            <th>科室</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>张三三</td>
+            <td>123123123</td>
+            <td>某类型</td>
+            <td>教授</td>
+            <td>科室主任</td>
+            <td>辽宁省</td>
+            <td>123123123123123</td>
+            <td>学士学位</td>
+            <td>心内科</td>
+            <td><button class="ui button table-del">删除</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="center-box">
+        <button class="ui blue button" style="width:300px">下一步</button>
+    </div>
+  </main>
+  <footer>
+    <div class="footer">
+      <p>Copyright © 2018 CCS&ESS Meetings 2018. All Rights Reserved.</p>
+      <p>京ICP备13020642号-20 京公网备案11010502025794</p>
+    </div>
+  </footer>
+</body>
+<script>
+
+</script>
+
+</html>

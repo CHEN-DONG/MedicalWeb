@@ -3,8 +3,10 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="user-scalable=yes">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="white">
   <link rel="stylesheet" href="../assets/css/semantic.min.css">
   <link rel="stylesheet" href="../css/common.css">
   <script src="../assets/js/jquery.min.js"></script>
@@ -107,7 +109,7 @@
         <input type="text" placeholder="请输入邮编" name="postcode">
       </div>
       <div class="teamdetail-btn center-box">
-        <button class="ui blue button"  style="width:200px" onclick="handleNextStep()">下一步</button>
+        <button class="ui blue button" style="width:200px" onclick="handleNextStep()">下一步</button>
       </div>
     </div>
   </main>
@@ -129,19 +131,19 @@
         position1: 'empty',
         position2: 'empty',
         connectauthor: 'empty',
-        otherauthor:['empty','regExp[^([^，]*，[^，]*){0,15}$]'],
+        otherauthor: ['empty', 'regExp[^([^，]*，[^，]*){0,15}$]'],
         authorname: 'empty',
         email: ['empty', 'email'],
         telephone: ['empty', 'number'],
         postcode: ['empty', 'number']
       },
-      onSuccess: function() {
+      onSuccess: function () {
         window.location.href = "./essayTwo.html";
       }
     });
-    function handleNextStep(){
-      $('.ui.form').form('validate form');
-    }
+  function handleNextStep() {
+    $('.ui.form').form('validate form');
+  }
 </script>
 
 </html>
