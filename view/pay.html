@@ -10,7 +10,7 @@
     <script src="../assets/js/jquery.min.js"></script>
     <script src="../assets/js/semantic.min.js"></script>
     <script src="../js/home.js"></script>
-    <title>登录</title>
+    <title>支付</title>
 </head>
 
 <body>
@@ -37,7 +37,7 @@
     </header>
     <main class="topnav main">
         <div>
-            <p class="amount">支付金额：<span>47000元</span></p>
+            <p class="pay-amount">支付金额：<span>47000元</span></p>
         </div>
         <div class="pay-type">
             <p>请选择您的支付方式</p>
@@ -56,63 +56,4 @@
         </div>
     </footer>
 </body>
-<style>
-    /*pay*/
-    
-    .amount {
-        display: flex;
-        position: relative;
-        padding-left: 15px;
-        line-height: 50px;
-        border-bottom: 1px solid #e1e1e1;
-    }
-    
-    .amount:before {
-        content: "";
-        position: absolute;
-        left: 5px;
-        align-self: center;
-        height: 14px;
-        width: 3px;
-        background: #1c9cfe;
-    }
-    
-    .amount span {
-        color: #ff8938;
-    }
-    
-    .pay-type {
-        padding-bottom: 40px;
-        text-align: center;
-    }
-    
-    .pay-type a {
-        display: inline-block;
-        align-items: center;
-        justify-content: center;
-        margin: 0 15px;
-        width: 140px;
-        min-width: 100px;
-        height: 45px;
-        line-height: 45px;
-        border: 1px solid #d9d9d9;
-        text-align: center;
-    }
-    
-    .pay-type img {
-        margin-right: 5px;
-        vertical-align: middle;
-    }
-    
-    .pay-type p {
-        margin: 25px 0;
-        text-align: left;
-    }
-    
-    .ui.button {
-        display: block;
-        margin: 0 auto;
-    }
-</style>
-
 </html>

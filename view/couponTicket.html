@@ -44,7 +44,7 @@
         <p class="date">有效期至
           <span>2018-10-10</span>
         </p>
-        <p class="amount">￥
+        <p class="coupon-amount">￥
           <span>50</span>
         </p>
       </div>
@@ -54,7 +54,7 @@
         <p class="date">有效期至
           <span>2018-10-10</span>
         </p>
-        <p class="amount">￥
+        <p class="coupon-amount">￥
           <span>50</span>
         </p>
       </div>
@@ -64,7 +64,7 @@
         <p class="date">有效期至
           <span>2018-10-10</span>
         </p>
-        <p class="amount">￥
+        <p class="coupon-amount">￥
           <span>50</span>
         </p>
       </div>
@@ -74,7 +74,7 @@
         <p class="date">有效期至
           <span>2018-10-10</span>
         </p>
-        <p class="amount">￥
+        <p class="coupon-amount">￥
           <span>50</span>
         </p>
       </div>
@@ -87,63 +87,4 @@
     </div>
   </footer>
 </body>
-<style>
-  .coupon-box {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .coupon-item {
-    width: 380px;
-    height: 100px;
-    margin: 0 0 20px 0;
-    padding: 16px 18px;
-    background-image: url(../assets/image/couponBackActive.png);
-    position: relative;
-  }
-
-  .coupon-item.disable {
-    background-image: url(../assets/image/couponBack.png);
-  }
-
-  .coupon-item.disable .title,
-  .coupon-item.disable .name,
-  .coupon-item.disable .date {
-    color: #c8c8c8 !important;
-  }
-
-  .coupon-item .title {
-    margin-bottom: 8px;
-    width: 80%;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
-
-  .coupon-item .name {
-    margin-bottom: 8px;
-    width: 80%;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
-
-  .coupon-item .date {
-    color: #f1513c;
-    font-size: 12px;
-  }
-
-  .coupon-item .amount {
-    position: absolute;
-    right: 20px;
-    color: #fff;
-    top: 45px;
-  }
-
-  .coupon-item .amount span {
-    font-size: 30px;
-  }
-</style>
-
 </html>

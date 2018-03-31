@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../assets/css/semantic.min.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <script src="../assets/js/jquery.min.js"></script>
+  <script src="../assets/js/semantic.min.js"></script>
+  <script src="../js/home.js"></script>
+  <title>征文</title>
+</head>
+
+<body>
+  <header>
+    <div class="ui borderless top menu">
+      <div class="logo">
+        <a href="./home.html">
+          <img src="../assets/image/logo.png">
+        </a>
+      </div>
+      <div class="right menu">
+        <a class="item" href="./home.html">首页</a>
+        <a class="item">参会指南</a>
+        <a class="item">参会报名</a>
+        <a class="item">会议动态</a>
+        <a class="item">会议视频</a>
+        <a class="item">会议征文</a>
+        <a class="item">关于我们</a>
+        <a class="item hide" href="./login.html">登录</a>
+        <a class="item active">个人中心</a>
+      </div>
+    </div>
+    <div class="banner bgi" style="background-image: url('../assets/image/banner.png')"></div>
+  </header>
+  <main class="topnav main">
+    <div class="ui form">
+      <h3 class="list-title">个人信息</h3>
+      <div class="inline center field">
+        <label>
+          <span class="required">* </span>第一作者：</label>
+        <input type="text" placeholder="请输入第一作者" name="author">
+      </div>
+      <div class="inline center field">
+        <label>
+          <span class="required">* </span>作者单位：</label>
+        <input type="text" placeholder="请输入作者单位" name="unit">
+      </div>
+      <div class="inline center fields">
+        <label>
+          <span class="required">* </span>职称：</label>
+        <div class="field">
+          <div class="ui selection dropdown">
+            <input type="hidden" name="position1">
+            <i class="dropdown icon"></i>
+            <div class="default text">请选择</div>
+            <div class="menu">
+              <div class="item" data-value="1">option1</div>
+              <div class="item" data-value="0">option2</div>
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui selection dropdown">
+            <input type="hidden" name="position2">
+            <i class="dropdown icon"></i>
+            <div class="default text">请选择</div>
+            <div class="menu">
+              <div class="item" data-value="1">option1</div>
+              <div class="item" data-value="0">option2</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="inline center field">
+        <label>
+          <span class="required">* </span>通讯作者：</label>
+        <input type="text" placeholder="请输入通讯作者" name="connectauthor">
+      </div>
+      <div class="inline center field">
+        <label>
+          <span class="required">* </span>其他作者：</label>
+        <input type="text" placeholder="请输入其他作者姓名" name="otherauthor" style="width:500px">
+        <span class="required" style="padding-left:10px">最多输入15个，中文逗号间隔</span>
+      </div>
+      <h3 class="list-title">投稿通讯联系方式</h3>
+      <div class="inline center field">
+        <label>
+          <span class="required">* </span>联系人姓名：</label>
+        <input type="text" placeholder="请输入联系人姓名" name="authorname">
+      </div>
+      <div class="inline center field">
+        <label>
+          <span class="required">* </span>邮箱：</label>
+        <input type="text" placeholder="请输入邮箱" name="email">
+      </div>
+      <div class="inline center field">
+        <label>
+          <span class="required">* </span>手机号码：</label>
+        <input type="text" placeholder="请输入手机号码" name="telephone">
+      </div>
+      <div class="inline center field">
+        <label>
+          <span class="required">* </span>邮编：</label>
+        <input type="text" placeholder="请输入邮编" name="postcode">
+      </div>
+      <div class="teamdetail-btn center-box">
+        <button class="ui blue button"  style="width:200px" onclick="handleNextStep()">下一步</button>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="footer">
+      <p>Copyright © 2018 CCS&ESS Meetings 2018. All Rights Reserved.</p>
+      <p>京ICP备13020642号-20 京公网备案11010502025794</p>
+    </div>
+  </footer>
+</body>
+<script>
+  $('.ui.dropdown').dropdown();
+  $('.ui.form')
+    .form({
+      fields: {
+        author: 'empty',
+        unit: 'empty',
+        position: 'empty',
+        position1: 'empty',
+        position2: 'empty',
+        connectauthor: 'empty',
+        otherauthor:['empty','regExp[^([^，]*，[^，]*){0,15}$]'],
+        authorname: 'empty',
+        email: ['empty', 'email'],
+        telephone: ['empty', 'number'],
+        postcode: ['empty', 'number']
+      },
+      onSuccess: function() {
+        window.location.href = "./essayTwo.html";
+      }
+    });
+    function handleNextStep(){
+      $('.ui.form').form('validate form');
+    }
+</script>
+
+</html>

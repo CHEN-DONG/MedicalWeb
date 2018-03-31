@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../assets/css/semantic.min.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <script src="../assets/js/jquery.min.js"></script>
+  <script src="../assets/js/semantic.min.js"></script>
+  <script src="../assets/js/wangEditor.min.js"></script>
+  <script src="../js/home.js"></script>
+  <title>征文</title>
+</head>
+
+<body>
+  <header>
+    <div class="ui borderless top menu">
+      <div class="logo">
+        <a href="./home.html">
+          <img src="../assets/image/logo.png">
+        </a>
+      </div>
+      <div class="right menu">
+        <a class="item" href="./home.html">首页</a>
+        <a class="item">参会指南</a>
+        <a class="item">参会报名</a>
+        <a class="item">会议动态</a>
+        <a class="item">会议视频</a>
+        <a class="item">会议征文</a>
+        <a class="item">关于我们</a>
+        <a class="item hide" href="./login.html">登录</a>
+        <a class="item active">个人中心</a>
+      </div>
+    </div>
+    <div class="banner bgi" style="background-image: url('../assets/image/banner.png')"></div>
+  </header>
+  <main class="topnav main">
+    <div class="ui form">
+      <div class="inline center fields">
+        <label>
+          <span class="required">* </span>是否参与评奖：</label>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="award" checked="checked">
+            <label>是</label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="award">
+            <label>否</label>
+          </div>
+        </div>
+      </div>
+      <div class="inline center field">
+        <label>
+          <span class="required">* </span>论文主题分类：</label>
+        <div class="ui selection dropdown">
+          <input type="hidden" name="subject">
+          <i class="dropdown icon"></i>
+          <div class="default text">请选择</div>
+          <div class="menu">
+            <div class="item" data-value="1">option1</div>
+            <div class="item" data-value="0">option2</div>
+          </div>
+        </div>
+      </div>
+      <div class="inline center field">
+        <label>
+          <span class="required">* </span>论文题目：</label>
+        <input type="text" placeholder="请输入论文题目" name="title" style="width:500px">
+      </div>
+      <div class="inline center field abstract">
+        <label>
+          <span class="required">* </span>论文摘要：</label>
+        <div>
+          <p>摘要内容字数建议限制在
+            <span class="required">600</span>字以内,请不要在下框内再次填写题目，作者，单位等信息，摘要内容请严格按照“目的，方法，结果，结论”四项，每项各一段进行填写。</p>
+            <div id="editor"></div>
+        </div>
+      </div>
+      <div class="inline center fields">
+        <label>期望发表形式：</label>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="sayingtype">
+            <label>大会发言</label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="sayingtype">
+            <label>壁报交流</label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="sayingtype">
+            <label>书面交流</label>
+          </div>
+        </div>
+      </div>
+      <div class="inline center field">
+        <label>
+          <span class="required">* </span>上传论文附件：</label>
+        <div>
+          <input name="file" type="file" />
+          <p class="required">支持doc,docx,pdf格式文件，且小于50M,附件中不能出现作者的姓名，单位，联系电话等信息。</p>
+        </div>
+      </div>
+      <div class="inline center fields">
+        <label>
+          <span class="required">* </span>附件内容：</label>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="contenttype" checked="checked">
+            <label>全文</label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="contenttype">
+            <label>摘要</label>
+          </div>
+        </div>
+      </div>
+      <div class="teamdetail-btn center-box">
+        <button class="ui blue button" style="width:200px" onclick="handleNextStep()">确认提交</button>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="footer">
+      <p>Copyright © 2018 CCS&ESS Meetings 2018. All Rights Reserved.</p>
+      <p>京ICP备13020642号-20 京公网备案11010502025794</p>
+    </div>
+  </footer>
+</body>
+<script type="text/javascript">
+  $('.ui.dropdown').dropdown();
+
+  var E = window.wangEditor
+  var editor = new E('#editor')
+  // 或者 var editor = new E( document.getElementById('editor') )
+  editor.create()
+
+  $('.ui.dropdown').dropdown();
+  $('.ui.form')
+    .form({
+      fields: {
+        award: 'checked',
+        subject: 'empty',
+        title: 'empty',
+        abstract: 'empty',
+        file: 'empty',
+        contenttype: 'empty',
+      },
+      onSuccess: function () {
+        window.location.href = "#";
+      }
+    });
+  function handleNextStep() {
+    $('.ui.form').form('validate form');
+  }
+</script>
+
+</html>
