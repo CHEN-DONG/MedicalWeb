@@ -170,8 +170,8 @@ header {
 }
 
 .ui.icon.button>img {
-    height: 10px;
-    width: 12px;
+    height: 15px;
+    width: 17px;
 }
 
 .list-title {
@@ -370,6 +370,10 @@ header {
 }
 
 .login-action a:hover {
+    color: #1c9cfe;
+}
+
+.login-action a:first-child {
     color: #1c9cfe;
 }
 

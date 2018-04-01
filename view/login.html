@@ -2,95 +2,95 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="user-scalable=yes">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="white">
-  <link rel="stylesheet" href="../assets/css/semantic.min.css">
-  <link rel="stylesheet" href="../css/common.css">
-  <script src="../assets/js/jquery.min.js"></script>
-  <script src="../assets/js/semantic.min.js"></script>
-  <script src="../js/home.js"></script>
-  <title>登录</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <link rel="stylesheet" href="../assets/css/semantic.min.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/semantic.min.js"></script>
+    <script src="../js/home.js"></script>
+    <title>登录</title>
 </head>
 
 <body>
-  <header>
-    <div class="ui borderless top menu">
-      <div class="logo">
-        <a href="./home.html">
-          <img src="../assets/image/logo.png">
-        </a>
-      </div>
-      <div class="right menu">
-        <a class="item" href="./home.html">首页</a>
-        <a class="item">参会指南</a>
-        <a class="item">参会报名</a>
-        <a class="item">会议动态</a>
-        <a class="item">会议视频</a>
-        <a class="item">会议征文</a>
-        <a class="item">关于我们</a>
-        <a class="item active" href="./login.html">登录</a>
-        <a class="item hide">个人中心</a>
-      </div>
-    </div>
-  </header>
-  <main>
-    <div class="backimage bgi" style="background-image: url('../assets/image/banner.png')">
-      <div class="ui card login">
-        <h3>登录</h3>
-        <form class="ui form">
-          <div class="field">
-            <div class="ui fluid input">
-              <input type="text" placeholder="请输入手机号">
+    <header>
+        <div class="ui borderless top menu">
+            <div class="logo">
+                <a href="./home.html">
+                    <img src="../assets/image/logo.png">
+                </a>
             </div>
-          </div>
-          <div class="field">
-            <div class="ui right labeled fluid input">
-              <input type="text" placeholder="请输入图像验证码">
-              <div class="ui basic label">
-                ABCDEF
-              </div>
+            <div class="right menu">
+                <a class="item" href="./home.html">首页</a>
+                <a class="item">参会指南</a>
+                <a class="item">参会报名</a>
+                <a class="item">会议动态</a>
+                <a class="item">会议视频</a>
+                <a class="item">会议征文</a>
+                <a class="item">关于我们</a>
+                <a class="item active" href="./login.html">登录</a>
+                <a class="item hide">个人中心</a>
             </div>
-          </div>
-          <div class="field">
-            <div class="ui action fluid link input">
-              <input type="text" placeholder="请输入手机验证码">
-              <button class="ui basic link button" type="button" onclick="alert('获取验证码')">发送验证码</button>
-            </div>
-          </div>
-          <div class="field">
-            <button class="fluid ui blue button">登录</button>
-            <div class="justify-box login-action">
-              <a href="#">
-                <span>立即注册</span>
-              </a>
-              <a href="#">
-                <span>忘记密码</span>
-              </a>
-            </div>
-          </div>
-          <div class="ui horizontal login divider">
-            第三方登录
-          </div>
-          <div class="around-box">
-            <button class="ui circular green icon button">
-              <img src="../assets/image/logo.png">
+        </div>
+    </header>
+    <main>
+        <div class="backimage bgi" style="background-image: url('../assets/image/login-background.jpg');background-size: cover">
+            <div class="ui card login">
+                <h3>登录</h3>
+                <form class="ui form">
+                    <div class="field">
+                        <div class="ui fluid input">
+                            <input type="text" placeholder="请输入手机号">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui right labeled fluid input">
+                            <input type="text" placeholder="请输入图像验证码">
+                            <div class="ui basic label">
+                                ABCDEF
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui action fluid link input">
+                            <input type="text" placeholder="请输入手机验证码">
+                            <button class="ui basic link button" type="button" onclick="alert('获取验证码')">发送验证码</button>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <button class="fluid ui blue button">登录</button>
+                        <div class="justify-box login-action">
+                            <a href="#">
+                                <span>立即注册</span>
+                            </a>
+                            <a href="#">
+                                <span>忘记密码</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ui horizontal login divider">
+                        第三方登录
+                    </div>
+                    <div class="around-box">
+                        <button class="ui circular green icon button">
+              <img src="../assets/image/wechat-login.png">
               <button class="ui circular blue  icon button">
-                <img src="../assets/image/logo.png">
+                <img src="../assets/image/alipay-login.png">
               </button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </main>
-  <footer>
-    <div class="footer">
-      <p>Copyright © 2018 CCS&ESS Meetings 2018. All Rights Reserved.</p>
-      <p>京ICP备13020642号-20 京公网备案11010502025794</p>
-    </div>
-  </footer>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <p>Copyright © 2018 CCS&ESS Meetings 2018. All Rights Reserved.</p>
+            <p>京ICP备13020642号-20 京公网备案11010502025794</p>
+        </div>
+    </footer>
 </body>
 
 </html>
